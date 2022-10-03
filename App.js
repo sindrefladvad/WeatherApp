@@ -10,7 +10,8 @@ import * as Font from "expo-font";
 import UnitsButton from "./components/UnitsButton";
 import ReloadButton from "./components/ReloadButton";
 import WeatherDetails from "./components/WeatherDetails";
-import { WEATHER_API_KEY } from "@env";
+
+const WEATHER_API_KEY = "YOUR_API_KEY"; // Needs to be modified, retrive an api key from https://openweathermap.org/api
 
 const BASE_WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather?";
 
@@ -23,8 +24,6 @@ export default function App() {
   const [errorMessage, setErrormessage] = useState(null);
   const [currentWeather, setCurrentWeather] = useState(null);
   const [unitSystem, setUnitSystem] = useState("metric");
-
-  console.log("WEATHER_API_KEY: ", WEATHER_API_KEY);
 
   // Load any resources or data that you need prior to rendering the app
   useEffect(() => {
